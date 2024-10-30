@@ -19,7 +19,8 @@
                 q7: "q7a1",
                 q8: "q8a3",
                 q9: "q9a2",
-                q10: "q10a1"
+                q10: "q10a1",
+                q11: "q11a2"
             };
             for (let [question, answer] of Object.entries(answers)) {
                 if (document.getElementById(answer).checked) {
@@ -117,7 +118,12 @@
                         <li><input type="radio" name="q10" id="q10a2"><label for="q10a2">Drones can predict crop health and growth</label></li>
                         <li><input type="radio" name="q10" id="q10a3"><label for="q10a3">They do supply drops for people in disasters</label></li>
                     </ul>
-
+                     <h3>Question 11: Who wrote this?</h3>
+                    <ul>
+                        <li><input type="radio" name="q10" id="q11a1"><label for="q10a1">Joe Stone</label></li>
+                        <li><input type="radio" name="q10" id="q11a2"><label for="q10a2">Alex Matzen</label></li>
+                        <li><input type="radio" name="q10" id="q11a3"><label for="q10a3">Jeremy Hiller</label></li>
+                    </ul>
                     <input type="submit" value="Submit">
                 </form>
 
