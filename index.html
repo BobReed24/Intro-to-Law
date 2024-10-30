@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Law Enforcement Drone Pilot Quiz</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <script>
+        function calculateScore(event) {
+            event.preventDefault(); // Prevent form submission
+            let score = 0;
+            const answers = {
+                q1: "q1a2",
+                q2: "q2a2",
+                q3: "q3a2",
+                q4: "q4a3",
+                q5: "q5a1",
+                q6: "q6a2",
+                q7: "q7a1",
+                q8: "q8a3",
+                q9: "q9a2",
+                q10: "q10a1"
+            };
+            for (let [question, answer] of Object.entries(answers)) {
+                if (document.getElementById(answer).checked) {
+                    score += 1;
+                }
+            }
+            document.getElementById("score").innerText = `Your score is: ${score}/10`;
+        }
+    </script>
+</head>
+<body>
+
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>Drone Pilot Quiz</strong></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="grid">
+            <section>
+                <hgroup>
+                    <h2>Law Enforcement Occupation Project Quiz</h2>
+                    <h3>Test Your Knowledge on the Role of a Drone Pilot</h3>
+                </hgroup>
+                <p>Answer the questions below and submit to see your score!</p>
+
+                <form onsubmit="calculateScore(event)">
+                    <h3>Question 1: What is the primary occupation discussed?</h3>
+                    <ul>
+                        <li><input type="radio" name="q1" id="q1a1"><label for="q1a1">Police Officer</label></li>
+                        <li><input type="radio" name="q1" id="q1a2"><label for="q1a2">Drone Pilot</label></li>
+                        <li><input type="radio" name="q1" id="q1a3"><label for="q1a3">Detective</label></li>
+                    </ul>
+
+                    <h3>Question 2: What is the slogan for the drone pilot job?</h3>
+                    <ul>
+                        <li><input type="radio" name="q2" id="q2a1"><label for="q2a1">Serve and Protect</label></li>
+                        <li><input type="radio" name="q2" id="q2a2"><label for="q2a2">We fly you fight!</label></li>
+                        <li><input type="radio" name="q2" id="q2a3"><label for="q2a3">Leave no one behind</label></li>
+                    </ul>
+
+                    <h3>Question 3: Which of these is NOT a part of the job description or skills?</h3>
+                    <ul>
+                        <li><input type="radio" name="q3" id="q3a1"><label for="q3a1">Gathering Footage</label></li>
+                        <li><input type="radio" name="q3" id="q3a2"><label for="q3a2">Rewriting the code</label></li>
+                        <li><input type="radio" name="q3" id="q3a3"><label for="q3a3">Assembling the maps</label></li>
+                    </ul>
+
+                    <h3>Question 4: Which of these is part of the education needed?</h3>
+                    <ul>
+                        <li><input type="radio" name="q4" id="q4a1"><label for="q4a1">A master's degree</label></li>
+                        <li><input type="radio" name="q4" id="q4a2"><label for="q4a2">A private pilot's license</label></li>
+                        <li><input type="radio" name="q4" id="q4a3"><label for="q4a3">A bachelor's degree in aviation</label></li>
+                    </ul>
+
+                    <h3>Question 5: What is the average drone pilot salary according to the slides?</h3>
+                    <ul>
+                        <li><input type="radio" name="q5" id="q5a1"><label for="q5a1">$130K</label></li>
+                        <li><input type="radio" name="q5" id="q5a2"><label for="q5a2">$115K</label></li>
+                        <li><input type="radio" name="q5" id="q5a3"><label for="q5a3">$80K</label></li>
+                    </ul>
+
+                    <h3>Question 6: What is the work environment according to the slides?</h3>
+                    <ul>
+                        <li><input type="radio" name="q6" id="q6a1"><label for="q6a1">A shopping mall</label></li>
+                        <li><input type="radio" name="q6" id="q6a2"><label for="q6a2">A military base</label></li>
+                        <li><input type="radio" name="q6" id="q6a3"><label for="q6a3">A hospital</label></li>
+                    </ul>
+
+                    <h3>Question 7: What special locations might drone pilots get access to in their careers?</h3>
+                    <ul>
+                        <li><input type="radio" name="q7" id="q7a1"><label for="q7a1">Restricted places</label></li>
+                        <li><input type="radio" name="q7" id="q7a2"><label for="q7a2">Employee-only rooms in hospitals</label></li>
+                        <li><input type="radio" name="q7" id="q7a3"><label for="q7a3">Their own office</label></li>
+                    </ul>
+
+                    <h3>Question 8: How many days off do drone pilots get on average per month according to the slides?</h3>
+                    <ul>
+                        <li><input type="radio" name="q8" id="q8a1"><label for="q8a1">5-10 days</label></li>
+                        <li><input type="radio" name="q8" id="q8a2"><label for="q8a2">3-5 days</label></li>
+                        <li><input type="radio" name="q8" id="q8a3"><label for="q8a3">12-20 days</label></li>
+                    </ul>
+
+                    <h3>Question 9: What is required besides education to become a drone pilot?</h3>
+                    <ul>
+                        <li><input type="radio" name="q9" id="q9a1"><label for="q9a1">A private pilot's license and 3 years of active military service</label></li>
+                        <li><input type="radio" name="q9" id="q9a2"><label for="q9a2">A Part 107 license and 40 hours of documented flying time</label></li>
+                        <li><input type="radio" name="q9" id="q9a3"><label for="q9a3">A Part 104 license and 50 hours of documented flying time</label></li>
+                    </ul>
+
+                    <h3>Question 10: Which of these is NOT the purpose of drone piloting according to the slides?</h3>
+                    <ul>
+                        <li><input type="radio" name="q10" id="q10a1"><label for="q10a1">Carrying people to safety</label></li>
+                        <li><input type="radio" name="q10" id="q10a2"><label for="q10a2">Drones can predict crop health and growth</label></li>
+                        <li><input type="radio" name="q10" id="q10a3"><label for="q10a3">They do supply drops for people in disasters</label></li>
+                    </ul>
+
+                    <input type="submit" value="Submit">
+                </form>
+
+                <p id="score"></p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
